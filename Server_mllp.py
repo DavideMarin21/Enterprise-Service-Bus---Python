@@ -58,15 +58,14 @@ class MLLPHandler(socketserver.BaseRequestHandler):
                     
                     fonti = config_db.get('fonti', {})
                     
-                    if sorgente:
+                    if sorgente in config_db.get('fonti', {}):
                         logger.info(f"Configurazione DB per {sorgente}")
                         db_key = sorgente
                     else:
                         logger.warning(f"Sorgente {sorgente} non configurata nel database. Uso DEFAULT.")
                         db_key = 'DEFAULT'
-                    
                     # Connessione al DB
-                    conn = connect_to_db_custom(db_key, config_db)
+                    conn = connect_to_db_custom_pool(db_key, config_db)
                     if conn is None:
                         logger.error("Connessione al database fallita")
                         return

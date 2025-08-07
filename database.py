@@ -27,25 +27,28 @@ def connect_to_db():
 def carica_config_db(path='db_config.yaml'):
     try:
         with open(path, 'r') as f:
-            config = yaml.safe_load(f)
-            return config['fonti']
+            return  yaml.safe_load(f)
     except Exception as e:
         logger.error(f"Errore durante il caricamento del file YAML: {e}", exc=e)
         return {}
 
+pool_cache = {}  # Cache per i pool di connessioni
 # Funzione per connettersi al database MySQL con configurazione da file YAML tramite pool di connessioni
-def connect_to_db_custom_pool(sorgente, config_db):
-    pool_cache = {}  
+def connect_to_db_custom_pool(sorgente, config_db):  
     sorgente_normalizzata = sorgente.replace(' ', '_').upper()
     fonti = config_db.get('fonti', {})
-    logger.debug(f"[DEBUG] Chiavi presenti in fonti: {list(fonti.keys())}")
-    logger.debug(f"[DEBUG] Chiave cercata: {sorgente_normalizzata}")
+    logger.debug(f"Chiavi presenti in fonti: {list(fonti.keys())}")
+    logger.debug(f"Chiave cercata: {sorgente_normalizzata}")
     
-    if sorgente_normalizzata not in config_db:
+    if sorgente_normalizzata not in fonti:
         logger.warning(f"Sorgente '{sorgente}' non trovata, uso DEFAULT.")
         sorgente_normalizzata = 'DEFAULT'
         
-    info = fonti[sorgente_normalizzata]
+    info = fonti.get(sorgente_normalizzata)
+    if not info:
+        logger.error(f"Nessuna configurazione trovata per '{sorgente_normalizzata}'")
+        return None
+    
     pool_name = f"pool_{sorgente_normalizzata}"
     
     if pool_name in pool_cache:
@@ -69,7 +72,7 @@ def connect_to_db_custom_pool(sorgente, config_db):
             return None
     try: 
         conn = pool.get_connection()
-        logger.info(f"Connessione al database {sorgente_normalizzata} riuscita tramite pool")
+        logger.debug(f"Connessione ottenuta dal pool per {sorgente_normalizzata}")
         return conn
     except Error as e:
         logger.error("Errore durante l'ottenimento della connessione dal pool", exc=e)

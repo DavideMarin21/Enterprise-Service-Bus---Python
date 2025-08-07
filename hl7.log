@@ -1,0 +1,56 @@
+2025-08-07 16:30:45 [INFO] Connessione aperta da ('127.0.0.1', 56553)
+2025-08-07 16:30:45 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-07 16:30:45 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-07 16:30:45 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-07 16:30:45 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-07 16:30:45 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-07 16:30:45 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-07 16:30:45 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-07 16:30:45 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-07 16:30:45 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-07 16:30:45 [DEBUG] Connessione ottenuta dal pool per PRONTO_SOCCORSO
+2025-08-07 16:30:45 [INFO] Paziente con ID 22222 già presente nel database.
+2025-08-07 16:30:45 [INFO] Paziente già presente: 22222
+2025-08-07 16:30:45 [INFO] Connessione al database chiusa
+2025-08-07 16:30:45 [DEBUG] ACK positivo inviato
+2025-08-07 16:30:45 [INFO] Connessione chiusa da ('127.0.0.1', 56553)
+2025-08-07 16:31:20 [INFO] Connessione aperta da ('127.0.0.1', 56560)
+2025-08-07 16:31:20 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-07 16:31:20 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-07 16:31:20 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-07 16:31:20 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-07 16:31:20 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-07 16:31:20 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-07 16:31:20 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-07 16:31:20 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-07 16:31:20 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-07 16:31:20 [DEBUG] Connessione ottenuta dal pool per PRONTO_SOCCORSO
+2025-08-07 16:31:20 [INFO] Paziente con ID 22222 già presente nel database.
+2025-08-07 16:31:20 [INFO] Paziente già presente: 22222
+2025-08-07 16:31:20 [INFO] Connessione al database chiusa
+2025-08-07 16:31:20 [DEBUG] ACK positivo inviato
+2025-08-07 16:31:20 [INFO] Connessione chiusa da ('127.0.0.1', 56560)
+2025-08-07 16:33:11 [INFO] Connessione aperta da ('127.0.0.1', 56594)
+2025-08-07 16:33:11 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-07 16:33:11 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-07 16:33:11 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-07 16:33:11 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-07 16:33:11 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-07 16:33:11 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-07 16:33:11 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-07 16:33:11 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-07 16:33:11 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-07 16:33:11 [DEBUG] Connessione ottenuta dal pool per PRONTO_SOCCORSO
+2025-08-07 16:33:11 [INFO] Paziente con ID 22222 già presente nel database.
+2025-08-07 16:33:11 [INFO] Paziente già presente: 22222
+2025-08-07 16:33:11 [INFO] Connessione al database chiusa
+2025-08-07 16:33:11 [DEBUG] ACK positivo inviato
+2025-08-07 16:33:11 [INFO] Connessione chiusa da ('127.0.0.1', 56594)
+2025-08-07 16:36:13 [INFO] Connessione aperta da ('127.0.0.1', 56602)
+2025-08-07 16:36:13 [INFO] Connessione chiusa da ('127.0.0.1', 56602)
+2025-08-07 16:40:10 [INFO] Connessione aperta da ('127.0.0.1', 56611)
+2025-08-07 16:40:10 [DEBUG] Messaggio HL7 ricevuto:
+sx
