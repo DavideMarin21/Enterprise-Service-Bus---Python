@@ -8,6 +8,10 @@ file_handler = TimedRotatingFileHandler(
 )
 class LoggerHL7:
     def __init__(self, name='HL7Logger', log_file='hl7.log', level=logging.DEBUG):
+        logs_dir = 'logs'
+        os.makedirs
+        log_path = os.path.join(logs_dir, log_file)
+        
         self.logger = logging.getLogger(name)
         self.logger.setLevel(level)
 
@@ -17,7 +21,7 @@ class LoggerHL7:
                 datefmt='%Y-%m-%d %H:%M:%S'
             )
 
-            file_handler = logging.FileHandler(log_file)
+            file_handler = logging.FileHandler(log_path)
             file_handler.setFormatter(formatter)
             self.logger.addHandler(file_handler)
 

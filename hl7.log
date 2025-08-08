@@ -54,3 +54,10 @@ MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002
 2025-08-07 16:40:10 [INFO] Connessione aperta da ('127.0.0.1', 56611)
 2025-08-07 16:40:10 [DEBUG] Messaggio HL7 ricevuto:
 sx
+2025-08-07 16:50:23 [INFO] Connessione aperta da ('127.0.0.1', 56662)
+2025-08-07 16:50:23 [INFO] Connessione chiusa da ('127.0.0.1', 56662)
+2025-08-07 16:55:14 [INFO] Connessione aperta da ('127.0.0.1', 56668)
+2025-08-07 16:55:14 [DEBUG] Messaggio HL7 ricevuto:
+dfcv
+2025-08-07 16:58:06 [INFO] Connessione aperta da ('127.0.0.1', 56673)
+2025-08-07 16:58:06 [INFO] Connessione chiusa da ('127.0.0.1', 56673)
