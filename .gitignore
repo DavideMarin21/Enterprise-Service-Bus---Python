@@ -1,0 +1,23 @@
+# Ignora virtual environment
+venv/
+
+# Cache di Python
+__pycache__/
+*.py[cod]
+*.class
+
+# File temporanei
+*.log
+*.tmp
+
+# Configurazioni locali
+.env
+
+# Cache e metadati di pacchetti
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# File di sistema
+.DS_Store
