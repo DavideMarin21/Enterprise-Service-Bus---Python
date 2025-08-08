@@ -23,15 +23,6 @@ def connect_to_db():
         logger.error("Errore durante la connessione al database", exc=e)
         return None 
 
-# Carico la configurazione del database da un file YAML
-def carica_config_db(path='db_config.yaml'):
-    try:
-        with open(path, 'r') as f:
-            return  yaml.safe_load(f)
-    except Exception as e:
-        logger.error(f"Errore durante il caricamento del file YAML: {e}", exc=e)
-        return {}
-
 pool_cache = {}  # Cache per i pool di connessioni
 # Funzione per connettersi al database MySQL con configurazione da file YAML tramite pool di connessioni
 def connect_to_db_custom_pool(sorgente, config_db):  

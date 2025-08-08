@@ -1,9 +1,10 @@
 import socketserver
-from database import connect_to_db, close_db_connection, aggiungi_paziente, merge_pazienti, ADT_A04, ADT_A41, carica_config_db, connect_to_db_custom, connect_to_db_custom_pool
+from database import connect_to_db, close_db_connection, aggiungi_paziente, merge_pazienti, ADT_A04, ADT_A41, connect_to_db_custom, connect_to_db_custom_pool
 from mysql.connector import Error
 from hl7apy.parser import parse_message
 from funzioni_per_HL7 import mappa_campi_hl7
 from LoggerHL7 import LoggerHL7  # Logging custom
+from config_loader import carica_config_db
 
 # MLLP delimiters
 START_BLOCK = b'\x0b'

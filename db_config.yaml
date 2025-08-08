@@ -25,3 +25,10 @@ fonti:
     user: root
     password: root
     database: HL7_Db
+destinazioni:
+  - tipo: 'HTTP'
+    url: 'http://localhost:8000/api/hl7'
+  - tipo: 'CODA'
+    host: localhost
+    queue: 'hl7_queue'
+  
