@@ -1,1 +1,336 @@
 2025-08-08 10:32:18 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-11 14:20:35 [DEBUG] Configurazione del database caricata: {'nome': 'Davide Marin', 'progetto': 'Python_Server', 'descrizione': 'Server TCP per la gestione di messaggi HL7', 'versione': 1.0, 'canali': [{'nome': 'TCP_INPUT', 'tipo': 'mllp', 'porta': 2575}], 'fonti': {'LABORATORIO': {'host': 'localhost', 'porta': 3306, 'user': 'root', 'password': 'root', 'database': 'lab_db'}, 'PRONTO_SOCCORSO': {'host': 'localhost', 'porta': 3306, 'user': 'root', 'password': 'root', 'database': 'db_pronto_soccorso'}, 'DEFAULT': {'host': 'localhost', 'porta': 3306, 'user': 'root', 'password': 'root', 'database': 'HL7_Db'}}, 'destinazioni': [{'tipo': 'HTTP', 'url': 'http://localhost:8000/api/hl7'}, {'tipo': 'CODA', 'host': 'localhost', 'queue': 'hl7_queue'}]}
+2025-08-11 14:20:35 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-11 15:14:29 [DEBUG] Configurazione YAML caricata
+2025-08-11 15:14:29 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-11 16:01:19 [DEBUG] Configurazione YAML caricata
+2025-08-11 16:01:19 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 11:59:36 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:01:28 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:02:14 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:10:26 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:10:26 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:10:26 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:10:59 [INFO] Connessione aperta da ('127.0.0.1', 49362)
+2025-08-12 12:10:59 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:11:00 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812121100||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:13:43 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:13:43 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:13:51 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:13:51 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:13:51 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:13:58 [INFO] Connessione aperta da ('127.0.0.1', 49370)
+2025-08-12 12:13:58 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:13:58 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812121358||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:13:58 [ERROR] Errore durante la gestione del messaggio HL7: No child named ENCODE
+2025-08-12 12:13:58 [DEBUG] Messaggio ACK creato: MSH|^~\&|||||20250812121358||ACK||P|2.5MSA|AR||No child named ENCODE
+2025-08-12 12:18:04 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:18:04 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:18:04 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:18:09 [INFO] Connessione aperta da ('127.0.0.1', 49378)
+2025-08-12 12:18:09 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:18:09 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812121809||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:18:09 [ERROR] Errore durante la gestione del messaggio HL7: a bytes-like object is required, not 'Message'
+2025-08-12 12:18:09 [DEBUG] Messaggio ACK creato: MSH|^~\&|||||20250812121809||ACK||P|2.5MSA|AR||a bytes-like object is required, not 'Message'
+2025-08-12 12:26:29 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:26:29 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:26:29 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:26:47 [INFO] Connessione aperta da ('127.0.0.1', 49383)
+2025-08-12 12:26:47 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:26:47 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812122647||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:26:47 [INFO] ACK positivo inviato
+2025-08-12 12:26:47 [ERROR] Errore pubblicazione RabbitMQ: 'list' object has no attribute 'get'
+2025-08-12 12:26:52 [INFO] Connessione chiusa da ('127.0.0.1', 49383)
+2025-08-12 12:27:41 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:27:41 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:27:41 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:28:06 [INFO] Connessione aperta da ('127.0.0.1', 49387)
+2025-08-12 12:28:06 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:28:06 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812122806||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:28:06 [INFO] ACK positivo inviato
+2025-08-12 12:28:06 [ERROR] Errore pubblicazione RabbitMQ: 'list' object has no attribute 'get'
+2025-08-12 12:28:11 [INFO] Connessione chiusa da ('127.0.0.1', 49387)
+2025-08-12 12:32:02 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:32:02 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:32:02 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:32:12 [INFO] Connessione aperta da ('127.0.0.1', 49394)
+2025-08-12 12:32:12 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:32:12 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812123212||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:32:12 [INFO] ACK positivo inviato
+2025-08-12 12:32:12 [ERROR] Errore pubblicazione RabbitMQ: 'list' object has no attribute 'get'
+2025-08-12 12:32:17 [INFO] Connessione chiusa da ('127.0.0.1', 49394)
+2025-08-12 12:33:23 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:33:23 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:33:40 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:33:40 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:33:40 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:33:45 [INFO] Connessione aperta da ('127.0.0.1', 49404)
+2025-08-12 12:33:45 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:33:45 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812123345||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:33:45 [INFO] ACK positivo inviato
+2025-08-12 12:33:45 [ERROR] Errore pubblicazione RabbitMQ: 'list' object has no attribute 'get'
+2025-08-12 12:33:50 [INFO] Connessione chiusa da ('127.0.0.1', 49404)
+2025-08-12 12:42:39 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:42:39 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:42:39 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:42:50 [INFO] Connessione aperta da ('127.0.0.1', 49410)
+2025-08-12 12:42:50 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:42:50 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812124250||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:42:50 [ERROR] Errore durante la gestione del messaggio HL7: can't concat str to bytes
+2025-08-12 12:42:50 [DEBUG] Messaggio ACK creato: MSH|^~\&|||||20250812124250||ACK||P|2.5MSA|AR||can't concat str to bytes
+2025-08-12 12:48:41 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:48:41 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:48:41 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:48:57 [INFO] Connessione aperta da ('127.0.0.1', 49419)
+2025-08-12 12:48:57 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:48:57 [ERROR] Errore pubblicazione RabbitMQ: 'list' object has no attribute 'get'
+2025-08-12 12:49:02 [INFO] Connessione chiusa da ('127.0.0.1', 49419)
+2025-08-12 12:53:04 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:53:04 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:53:04 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:53:20 [INFO] Connessione aperta da ('127.0.0.1', 49424)
+2025-08-12 12:53:20 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:53:20 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812125320||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:53:20 [ERROR] Errore durante la gestione del messaggio HL7: can't concat Message to bytes
+2025-08-12 12:53:20 [DEBUG] Messaggio ACK creato: MSH|^~\&|||||20250812125320||ACK||P|2.5MSA|AR||can't concat Message to bytes
+2025-08-12 12:54:17 [DEBUG] Configurazione YAML caricata
+2025-08-12 12:54:17 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 12:54:17 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:54:23 [INFO] Connessione aperta da ('127.0.0.1', 49429)
+2025-08-12 12:54:23 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:54:23 [DEBUG] Messaggio ACK creato: MSH|^~\&|DBSERVER|HOSPITAL|PRONTO_SOCCORSO|HOSPITAL|20250812125423||ACK|ACK_MSG002|P|2.5MSA|AA|MSG002|Messaggio accettato
+2025-08-12 12:54:23 [INFO] ACK positivo inviato
+2025-08-12 12:54:23 [ERROR] Errore pubblicazione RabbitMQ: 'list' object has no attribute 'get'
+2025-08-12 12:54:28 [INFO] Connessione chiusa da ('127.0.0.1', 49429)
+2025-08-12 12:57:47 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:58:04 [INFO] Connessione aperta da ('127.0.0.1', 49431)
+2025-08-12 12:58:04 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:58:04 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-12 12:58:04 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-12 12:58:04 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-12 12:58:04 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-12 12:58:04 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-12 12:58:04 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-12 12:58:04 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-12 12:58:04 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-12 12:58:54 [INFO] Connessione aperta da ('127.0.0.1', 49432)
+2025-08-12 12:58:54 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:58:54 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-12 12:58:54 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-12 12:58:54 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-12 12:58:54 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-12 12:58:54 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-12 12:58:54 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-12 12:58:54 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-12 12:58:54 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-12 12:59:04 [INFO] Connessione aperta da ('127.0.0.1', 49433)
+2025-08-12 12:59:04 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:59:04 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-12 12:59:04 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-12 12:59:04 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-12 12:59:04 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-12 12:59:04 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-12 12:59:04 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-12 12:59:04 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-12 12:59:04 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-12 12:59:35 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 12:59:40 [INFO] Connessione aperta da ('127.0.0.1', 49434)
+2025-08-12 12:59:40 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 12:59:40 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-12 12:59:40 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-12 12:59:40 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-12 12:59:40 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-12 12:59:40 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-12 12:59:40 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-12 12:59:40 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-12 12:59:40 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-12 13:04:16 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 13:04:23 [INFO] Connessione aperta da ('127.0.0.1', 49437)
+2025-08-12 13:04:23 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 13:04:23 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-12 13:04:23 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-12 13:04:23 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-12 13:04:23 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-12 13:04:23 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-12 13:04:23 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-12 13:04:23 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-12 13:04:23 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-12 13:05:10 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 13:05:14 [INFO] Connessione aperta da ('127.0.0.1', 49438)
+2025-08-12 13:05:14 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 13:05:14 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-12 13:05:14 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-12 13:05:14 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-12 13:05:14 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-12 13:05:14 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-12 13:05:14 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-12 13:05:14 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-12 13:05:14 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-12 13:05:14 [ERROR] Errore durante la creazione del pool di connessioni 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (61)
+2025-08-12 13:05:14 [ERROR] Connessione al database fallita
+2025-08-12 13:05:52 [INFO] Connessione aperta da ('127.0.0.1', 49455)
+2025-08-12 13:05:52 [DEBUG] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 13:05:52 [INFO] Parsing del messaggio HL7 riuscito
+2025-08-12 13:05:52 [INFO] Tipo di messaggio ricevuto: ADT^A04
+2025-08-12 13:05:52 [DEBUG] Campi mappati dal messaggio HL7: {'MSH_1': '|', 'MSH_2': '^~\\&', 'MSH_3': 'PRONTO_SOCCORSO', 'MSH_4': 'HOSPITAL', 'MSH_5': 'DBSERVER', 'MSH_6': 'HOSPITAL', 'MSH_7': '202508051405', 'MSH_9': 'ADT^A04', 'MSH_10': 'MSG002', 'MSH_11': 'P', 'MSH_12': '2.5', 'EVN_1': 'A04', 'EVN_2': '202508051405', 'PID_1': '1', 'PID_3': '22222^^^HOSPITAL^MR', 'PID_5': 'Verdi^Anna', 'PID_7': '19920303', 'PID_8': 'F', 'PID_11': 'Via Verdi 20^^Venezia^^30100^IT'}
+2025-08-12 13:05:52 [INFO] Sorgente del messaggio: PRONTO_SOCCORSO
+2025-08-12 13:05:52 [INFO] Configurazione DB per PRONTO_SOCCORSO
+2025-08-12 13:05:52 [DEBUG] Chiavi presenti in fonti: ['LABORATORIO', 'PRONTO_SOCCORSO', 'DEFAULT']
+2025-08-12 13:05:52 [DEBUG] Chiave cercata: PRONTO_SOCCORSO
+2025-08-12 13:05:52 [INFO] Creazione pool di connessioni per PRONTO_SOCCORSO
+2025-08-12 13:05:52 [DEBUG] Connessione ottenuta dal pool per PRONTO_SOCCORSO
+2025-08-12 13:05:52 [INFO] Paziente con ID 22222 già presente nel database.
+2025-08-12 13:05:52 [INFO] Paziente già presente: 22222
+2025-08-12 13:05:52 [INFO] Connessione al database chiusa
+2025-08-12 13:05:52 [DEBUG] ACK positivo inviato
+2025-08-12 13:05:52 [INFO] Connessione chiusa da ('127.0.0.1', 49455)
+2025-08-12 14:08:54 [DEBUG] Configurazione YAML caricata
+2025-08-12 14:08:54 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 14:08:54 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 14:09:41 [INFO] Connessione aperta da ('127.0.0.1', 49482)
+2025-08-12 14:09:41 [INFO] Tipo messaggio sconosciuto
+2025-08-12 14:09:46 [INFO] Connessione chiusa da ('127.0.0.1', 49482)
+2025-08-12 14:10:38 [DEBUG] Configurazione YAML caricata
+2025-08-12 14:10:38 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 14:10:38 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 14:10:42 [INFO] Connessione aperta da ('127.0.0.1', 49490)
+2025-08-12 14:10:42 [INFO] Tipo messaggio sconosciuto
+2025-08-12 14:10:47 [INFO] Connessione chiusa da ('127.0.0.1', 49490)
+2025-08-12 14:27:01 [DEBUG] Configurazione YAML caricata
+2025-08-12 14:27:01 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 14:27:01 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 14:27:16 [INFO] Connessione aperta da ('127.0.0.1', 49505)
+2025-08-12 14:27:16 [INFO] Tipo messaggio sconosciuto
+2025-08-12 14:27:21 [INFO] Connessione chiusa da ('127.0.0.1', 49505)
+2025-08-12 14:28:05 [INFO] Connessione aperta da ('127.0.0.1', 49508)
+2025-08-12 14:28:05 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 14:28:05 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250812142805||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-12 14:28:05 [INFO] ACK positivo inviato
+2025-08-12 14:28:05 [ERROR] Errore pubblicazione RabbitMQ: 'list' object has no attribute 'get'
+2025-08-12 14:28:05 [INFO] Connessione chiusa da ('127.0.0.1', 49508)
+2025-08-12 14:37:43 [DEBUG] Configurazione YAML caricata
+2025-08-12 14:40:47 [DEBUG] Configurazione YAML caricata
+2025-08-12 14:40:47 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 14:40:47 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 14:41:23 [INFO] Connessione aperta da ('127.0.0.1', 49516)
+2025-08-12 14:41:23 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 14:41:23 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250812144123||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-12 14:41:23 [INFO] ACK positivo inviato
+2025-08-12 14:41:23 [ERROR] Errore pubblicazione RabbitMQ: 'RabbitPubblisher' object has no attribute 'pubblish'
+2025-08-12 14:41:23 [INFO] Connessione chiusa da ('127.0.0.1', 49516)
+2025-08-12 14:47:07 [DEBUG] Configurazione YAML caricata
+2025-08-12 14:47:07 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 14:47:07 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-12 14:47:21 [INFO] Connessione aperta da ('127.0.0.1', 49521)
+2025-08-12 14:47:21 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 14:47:21 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250812144721||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-12 14:47:21 [INFO] ACK positivo inviato
+2025-08-12 14:47:21 [ERROR] Errore pubblicazione RabbitMQ: Publisher confirm not received
+2025-08-12 14:47:21 [INFO] Connessione chiusa da ('127.0.0.1', 49521)
+2025-08-12 14:48:15 [INFO] Connessione aperta da ('127.0.0.1', 49647)
+2025-08-12 14:48:15 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-12 14:48:15 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250812144815||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-12 14:48:15 [INFO] ACK positivo inviato
+2025-08-12 14:48:15 [ERROR] Publish failed, retrying after reconnect: Stream connection lost: ConnectionResetError(54, 'Connection reset by peer')
+2025-08-12 14:48:15 [INFO] Connessione a RabbitMQ stabilita
+2025-08-12 14:48:15 [ERROR] Errore pubblicazione RabbitMQ: Publisher confirm not received after reconnect
+2025-08-12 14:48:15 [INFO] Connessione chiusa da ('127.0.0.1', 49647)
+2025-08-13 10:36:46 [DEBUG] Configurazione YAML caricata
+2025-08-13 10:38:40 [DEBUG] Configurazione YAML caricata
+2025-08-13 10:38:40 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-13 10:38:52 [INFO] Server MLLP chiuso.
+2025-08-13 10:38:52 [INFO] Connessione chiusa
+2025-08-13 10:38:52 [ERROR] Problema con la chiusura: BlockingConnection.close(200, 'Normal shutdown') called on closed connection.
+2025-08-13 10:38:52 [INFO] Chiusura connessione publisher.
+2025-08-13 10:38:58 [DEBUG] Configurazione YAML caricata
+2025-08-13 10:38:58 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-13 10:40:38 [INFO] Connessione aperta da ('127.0.0.1', 50141)
+2025-08-13 10:40:38 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-13 10:40:38 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250813104038||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-13 10:40:38 [INFO] ACK positivo inviato
+2025-08-13 10:40:38 [INFO] Messaggio inviato a coda HL7
+2025-08-13 10:40:38 [INFO] Messaggio pubblicato su RabbitMQ
+2025-08-13 10:40:38 [INFO] Connessione chiusa da ('127.0.0.1', 50141)
+2025-08-13 10:43:21 [INFO] Connessione aperta da ('127.0.0.1', 50152)
+2025-08-13 10:43:21 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-13 10:43:21 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250813104321||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-13 10:43:21 [INFO] ACK positivo inviato
+2025-08-13 10:43:21 [ERROR] Errore nel mandare il messaggio: Transport indicated EOF
+2025-08-13 10:43:21 [ERROR] Errore durante la pubblicazione su RabbitMQ: Transport indicated EOF
+2025-08-13 10:43:21 [INFO] Connessione chiusa da ('127.0.0.1', 50152)
+2025-08-13 10:43:50 [INFO] Connessione aperta da ('127.0.0.1', 50155)
+2025-08-13 10:43:50 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-13 10:43:50 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250813104350||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-13 10:43:50 [INFO] ACK positivo inviato
+2025-08-13 10:43:50 [ERROR] Errore nel mandare il messaggio: Channel is closed.
+2025-08-13 10:43:50 [ERROR] Errore durante la pubblicazione su RabbitMQ: Channel is closed.
+2025-08-13 10:43:50 [INFO] Connessione chiusa da ('127.0.0.1', 50155)
+2025-08-13 10:45:44 [INFO] Server MLLP chiuso.
+2025-08-13 10:45:44 [ERROR] Problema con la chiusura: BlockingConnection.close(200, 'Normal shutdown') called on closed connection.
+2025-08-13 10:45:44 [ERROR] Problema con la chiusura: BlockingConnection.close(200, 'Normal shutdown') called on closed connection.
+2025-08-13 10:45:44 [INFO] Chiusura connessione publisher.
+2025-08-13 10:47:06 [DEBUG] Configurazione YAML caricata
+2025-08-13 10:47:06 [INFO] Server MLLP in ascolto su localhost:2575
+2025-08-13 10:47:24 [INFO] Connessione aperta da ('127.0.0.1', 50165)
+2025-08-13 10:47:24 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-13 10:47:24 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250813104724||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-13 10:47:24 [INFO] ACK positivo inviato
+2025-08-13 10:47:24 [INFO] Messaggio inviato a coda HL7
+2025-08-13 10:47:24 [INFO] Messaggio pubblicato su RabbitMQ
+2025-08-13 10:47:24 [INFO] Connessione chiusa da ('127.0.0.1', 50165)
+2025-08-13 10:47:38 [INFO] Connessione aperta da ('127.0.0.1', 50166)
+2025-08-13 10:47:38 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-13 10:47:38 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250813104738||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-13 10:47:38 [INFO] ACK positivo inviato
+2025-08-13 10:47:38 [INFO] Messaggio inviato a coda HL7
+2025-08-13 10:47:38 [INFO] Messaggio pubblicato su RabbitMQ
+2025-08-13 10:47:38 [INFO] Connessione chiusa da ('127.0.0.1', 50166)
+2025-08-13 10:47:45 [INFO] Connessione aperta da ('127.0.0.1', 50167)
+2025-08-13 10:47:45 [INFO] Messaggio HL7 ricevuto:
+MSH|^~\&|PRONTO_SOCCORSO|HOSPITAL|DBSERVER|HOSPITAL|202508051405||ADT^A04|MSG002|P|2.5EVN|A04|202508051405PID|1||22222^^^HOSPITAL^MR||Verdi^Anna||19920303|F|||Via Verdi 20^^Venezia^^30100^IT
+2025-08-13 10:47:45 [DEBUG] ACK MLLP generato:
+b'\x0bMSH|^~\\&|SERVER|HOSPITAL|CLIENTAPP|HOSPITAL|20250813104745||ACK|ACK_MSG001|P|2.5\rMSA|AA|MSG001\r\x1c\r'
+2025-08-13 10:47:45 [INFO] ACK positivo inviato
+2025-08-13 10:47:45 [INFO] Messaggio inviato a coda HL7
+2025-08-13 10:47:45 [INFO] Messaggio pubblicato su RabbitMQ
+2025-08-13 10:47:45 [INFO] Connessione chiusa da ('127.0.0.1', 50167)
+2025-08-13 10:47:57 [INFO] Server MLLP chiuso.
+2025-08-13 10:47:57 [INFO] Connessione chiusa
+2025-08-13 10:47:57 [ERROR] Problema con la chiusura: BlockingConnection.close(200, 'Normal shutdown') called on closed connection.
+2025-08-13 10:47:57 [INFO] Chiusura connessione publisher.

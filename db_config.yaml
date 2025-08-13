@@ -2,12 +2,14 @@ nome: Davide Marin
 progetto: Python_Server
 descrizione: Server TCP per la gestione di messaggi HL7
 versione: 1.0
+
 canali:
   - nome: TCP_INPUT
     tipo: mllp
     porta: 2575
+
 fonti:
-  LABORATORIO: 
+  LABORATORIO:
     host: localhost
     porta: 3306
     user: root
@@ -25,10 +27,14 @@ fonti:
     user: root
     password: root
     database: HL7_Db
+
 destinazioni:
-  - tipo: 'HTTP'
-    url: 'http://localhost:8000/api/hl7'
-  - tipo: 'CODA'
-    host: localhost
-    queue: 'hl7_queue'
-  
+  host: localhost
+  porta: 5672
+  username: guest
+  password: guest
+  virtual_host: /
+  exchange: hl7.exchange
+  exchange_type: topic
+  routing_key_fallback: hl7.unknown
+  publisher_confirms: true

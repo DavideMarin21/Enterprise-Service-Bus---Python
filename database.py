@@ -20,7 +20,7 @@ def connect_to_db():
             return conn
     except Error as e:
         #print("Errore durante la connessione al database:", e)
-        logger.error("Errore durante la connessione al database", exc=e)
+        logger.error(f"Errore durante la connessione al database {e}")
         return None 
 
 pool_cache = {}  # Cache per i pool di connessioni
@@ -59,14 +59,14 @@ def connect_to_db_custom_pool(sorgente, config_db):
             )
             pool_cache[pool_name] = pool
         except Error as e:
-            logger.error("Errore durante la creazione del pool di connessioni", exc=e)
+            logger.error(f"Errore durante la creazione del pool di connessioni {e}")
             return None
     try: 
         conn = pool.get_connection()
         logger.debug(f"Connessione ottenuta dal pool per {sorgente_normalizzata}")
         return conn
     except Error as e:
-        logger.error("Errore durante l'ottenimento della connessione dal pool", exc=e)
+        logger.error(f"Errore durante l'ottenimento della connessione dal pool {e}")
         return None
   
 # Funzione per connettersi al database MySQL con configurazione da file YAML
@@ -91,7 +91,7 @@ def connect_to_db_custom(sorgente, config_db):
             logger.info("Connessione al database riuscita")
             return conn
     except Error as e:
-        logger.error("Errore durante la connessione al database", exc=e)
+        logger.error(f"Errore durante la connessione al database {e}")
         return None
 
 # Funzione per chiudere la connessione al database
@@ -136,7 +136,7 @@ def aggiungi_paziente(PID_3, PID_5, PID_11, conn):
         return ID_Paziente
 
     except Error as e:
-        logger.error("Errore durante l'inserimento del paziente", exc_info=True)
+        logger.error(f"Errore durante l'inserimento del paziente")
         return None
 
 # Funzione per fare il merge di due pazienti nel database
@@ -183,7 +183,7 @@ def merge_pazienti(PID_3, MRG_1,conn):
             return True
     except Error as e:
         #print("Errore durante il merge dei pazienti:", e)
-        logger.error("Errore durante il merge dei pazienti", exc=e)
+        logger.error(f"Errore durante il merge dei pazienti {e}")
     #finally:
         #close_db_connection(conn)
     
@@ -196,11 +196,10 @@ def ADT_A04(hl7_message, conn):
         result = aggiungi_paziente(PID_3, PID_5, PID_11,conn)
         if result:
             logger.info(f"Paziente aggiunto con ID {result}")
-
         else:
             logger.info(f"Paziente già presente: {PID_3.split('^')[0]}")
     except Error as e:
-        logger.error("Errore durante l'inserimento del paziente", exc=e) 
+        logger.error(f"Errore durante l'inserimento del paziente {e}")
         
 # Funzione per gestire il messaggio ADT^A41    
 def ADT_A41(hl7_message, conn):
@@ -213,4 +212,4 @@ def ADT_A41(hl7_message, conn):
         else:
             logger.warning(f"Merge fallito tra {MRG_1.split('^')[0]} → {PID_3.split('^')[0]}")
     except Error as e:
-        logger.error("Errore durante il merge dei pazienti", exc=e)
+        logger.error(f"Errore durante il merge dei pazienti {e}")

@@ -1,6 +1,5 @@
 import logging
 import os
-from datetime import datetime
 from logging.handlers import TimedRotatingFileHandler
 
 file_handler = TimedRotatingFileHandler(
