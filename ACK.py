@@ -52,8 +52,8 @@ def risposta_ack(messaggio_hl7, esito: str, tipo_errore: str | None = None,
 
     recv_app      = get("msh.msh_3", "CLIENTAPP")
     recv_facility = get("msh.msh_4", "HOSPITAL")
-    orig_msg_type = get("msh.msh_9", "")         # es. "ADT^A04"
-    orig_ctrl_id  = get("msh.msh_10", "MSG001")  # es. "MSG001"
+    orig_msg_type = get("msh.msh_9", "")
+    orig_ctrl_id  = get("msh.msh_10", "MSG001")
     version       = get("msh.msh_12", "2.5")
 
     # Timestamp corrente formattato HL7
