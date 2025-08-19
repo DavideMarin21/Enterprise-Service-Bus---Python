@@ -9,7 +9,6 @@ __pycache__/
 # File temporanei
 *.log
 *.tmp
-*.logs
 
 # Configurazioni locali
 .env
@@ -22,3 +21,6 @@ build/
 
 # File di sistema
 .DS_Store
+
+# Cartella dei logs
+logs/
