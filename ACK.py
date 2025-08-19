@@ -1,4 +1,4 @@
-from LoggerHL7 import LoggerHL7
+from Gestore_Logs.LoggerHL7 import LoggerHL7
 from hl7apy.parser import parse_message
 from hl7apy.core import Message
 from datetime import datetime
