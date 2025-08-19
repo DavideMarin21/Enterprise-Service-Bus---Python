@@ -1,7 +1,7 @@
 import socketserver
 from Server_MLLP_prova import MLLPHandler
-from LoggerHL7 import LoggerHL7
-from RabbitPublisher import RabbitPublisher
+from Gestore_Logs.LoggerHL7 import LoggerHL7
+from RabbitMQ.RabbitPublisher import RabbitPublisher
 logger = LoggerHL7()
 
 if __name__ == "__main__":
