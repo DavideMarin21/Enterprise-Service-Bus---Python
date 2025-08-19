@@ -1,9 +1,11 @@
 import socketserver
-from database import close_db_connection, ADT_A04, ADT_A41, connect_to_db_custom_pool
-from mysql.connector import Error
+from Funzioni_Database.database import close_db_connection, connect_to_db_custom_pool
+from Funzioni_Gestione_HL7.ADT_A04 import ADT_A04
+from Funzioni_Gestione_HL7.ADT_A23 import ADT_A23
+from Funzioni_Gestione_HL7.ADT_A41 import ADT_A41
 from hl7apy.parser import parse_message
-from funzioni_per_HL7 import mappa_campi_hl7
-from LoggerHL7 import LoggerHL7  # Logging custom
+from Funzioni_Gestione_HL7.funzioni_per_HL7 import mappa_campi_hl7
+from Gestore_Logs.LoggerHL7 import LoggerHL7
 from config_loader import carica_config_db
 
 # MLLP delimiters
@@ -13,7 +15,7 @@ CARRIAGE_RETURN = b'\x0d'
 
 # Inizializza logger globale
 config_db = carica_config_db()
-logger = LoggerHL7()
+logger = LoggerHL7 ()
 
 class MLLPHandler(socketserver.BaseRequestHandler):
     def handle(self):
@@ -39,7 +41,7 @@ class MLLPHandler(socketserver.BaseRequestHandler):
                         hl7_message = parse_message(raw_hl7)
                         logger.info("Parsing del messaggio HL7 riuscito")
                     except Exception as e:
-                        logger.error("Errore nel parsing del messaggio HL7", exc=e)
+                        logger.error(f"Errore nel parsing del messaggio HL7: {e}")
                         return
 
                     # Identifica tipo messaggio
@@ -51,7 +53,7 @@ class MLLPHandler(socketserver.BaseRequestHandler):
                         campi = mappa_campi_hl7(hl7_message)
                         logger.debug(f"Campi mappati dal messaggio HL7: {campi}")
                     except Exception as e:
-                        logger.error("Errore durante la mappatura dei campi HL7", exc=e)
+                        logger.error(f"Errore durante la mappatura dei campi HL7 {e}")
                         return
                     
                     sorgente = hl7_message.msh.msh_3.value.upper()
@@ -73,9 +75,10 @@ class MLLPHandler(socketserver.BaseRequestHandler):
 
                     if msg_type == 'ADT^A04':
                         ADT_A04(hl7_message, conn)
-
                     elif msg_type == 'ADT^A41':
                         ADT_A41(hl7_message, conn)
+                    elif msg_type == 'ADT^A23':
+                        ADT_A23(hl7_message, conn)
                     else:
                         logger.warning(f"Tipo messaggio non gestito: {msg_type}")
 
@@ -91,7 +94,7 @@ class MLLPHandler(socketserver.BaseRequestHandler):
                     logger.debug("ACK positivo inviato")
 
                 except Exception as e:
-                    logger.error("Errore nella gestione del messaggio HL7", exc=e)
+                    logger.error(f"Errore nella gestione del messaggio HL7 {e}")
 
         logger.info(f"Connessione chiusa da {self.client_address}")
         

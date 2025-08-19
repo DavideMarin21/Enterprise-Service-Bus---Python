@@ -1,9 +1,7 @@
 import socketserver
-from LoggerHL7 import LoggerHL7  # Logging custom
+from Gestore_Logs.LoggerHL7 import LoggerHL7
 from config_loader import carica_config_db
 from ACK import risposta_ack
-from hl7_routing import routing_key_from_hl7
-import RabbitPublisher
 
 # Delimitatori MLLP
 START_BLOCK = b'\x0b'
