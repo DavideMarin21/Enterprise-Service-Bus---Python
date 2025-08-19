@@ -1,8 +1,7 @@
 from mysql.connector import Error
-from LoggerHL7 import LoggerHL7
+from Gestore_Logs.LoggerHL7 import LoggerHL7
 
 logger = LoggerHL7()
-
 
 # Funzione per aggiungere un paziente al database
 def aggiungi_paziente(PID_3, PID_5, PID_11, conn):

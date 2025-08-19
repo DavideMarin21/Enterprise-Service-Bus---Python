@@ -1,5 +1,5 @@
 from mysql.connector import Error
-from LoggerHL7 import LoggerHL7
+from Gestore_Logs.LoggerHL7 import LoggerHL7
 
 logger = LoggerHL7()
 
