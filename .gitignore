@@ -9,6 +9,7 @@ __pycache__/
 # File temporanei
 *.log
 *.tmp
+*.logs
 
 # Configurazioni locali
 .env
