@@ -1,6 +1,6 @@
 import mysql.connector
 from mysql.connector import Error, pooling
-from LoggerHL7 import LoggerHL7
+from Gestore_Logs.LoggerHL7 import LoggerHL7
 
 logger = LoggerHL7()
 
