@@ -10,7 +10,7 @@ Nella cartella logs crea ogni giorno un file log denominato: logs_%d%m%Y.log
 
 class LoggerHL7:
     def __init__(self, name='HL7Logger', level=logging.DEBUG):
-        logs_dir = 'logs'
+        logs_dir = '../logs'
         os.makedirs(logs_dir, exist_ok=True)
 
         # Nome del file log giornaliero
