@@ -3,3 +3,5 @@ a dei database e fare delle Query in base al messaggio in ingresso. Inoltre cerc
 integrare un Message Broker per gestire code di messaggi in caso di alto carico.
 
 Per far partire il server MLLP bisogna runnare main.py
+Per far partire il consumer bisogna runnare RabbitConsumer.py presente nella cartella R
+RabbitMQ

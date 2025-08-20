@@ -1,5 +1,5 @@
 import socketserver
-from Server_MLLP_prova import MLLPHandler
+from Server_MLLP.Server_MLLP_prova import MLLPHandler
 from Gestore_Logs.LoggerHL7 import LoggerHL7
 from RabbitMQ.RabbitPublisher import RabbitPublisher
 logger = LoggerHL7()
