@@ -1,21 +1,18 @@
 import logging
 import os
 from logging.handlers import TimedRotatingFileHandler
-from datetime import datetime
 
 """
 Classe per gestire i logs.
-Nella cartella logs crea ogni giorno un file log denominato: logs_%d%m%Y.log
+Nella cartella /Users/davidemarin/VSC/Python_Server/logs
+crea ogni giorno un file log denominato: logs_%d%m%Y.log
 """
 
 class LoggerHL7:
     def __init__(self, name='HL7Logger', level=logging.DEBUG):
-        logs_dir = '../logs'
+        # Percorso assoluto della cartella logs
+        logs_dir = "/Users/davidemarin/VSC/Python_Server/logs"
         os.makedirs(logs_dir, exist_ok=True)
-
-        # Nome del file log giornaliero
-        log_filename = datetime.now().strftime("logs_%d%m%Y.log")
-        log_path = os.path.join(logs_dir, log_filename)
 
         self.logger = logging.getLogger(name)
         self.logger.setLevel(level)
@@ -28,7 +25,7 @@ class LoggerHL7:
 
             # File handler con rotazione giornaliera
             file_handler = TimedRotatingFileHandler(
-                filename=os.path.join(logs_dir, "logs.log"),  # file "base"
+                filename=os.path.join(logs_dir, "logs"),  # file base (rinominato a mezzanotte)
                 when="midnight",
                 interval=1,
                 backupCount=7,
@@ -36,9 +33,8 @@ class LoggerHL7:
                 utc=False
             )
 
-            # Sovrascrive il nome fisico dei file rotati con data
+            # Rinomina i file rotati con suffisso data
             file_handler.suffix = "%d%m%Y.log"
-            file_handler.extMatch = r"^\d{8}\.log$"
 
             file_handler.setFormatter(formatter)
             self.logger.addHandler(file_handler)
